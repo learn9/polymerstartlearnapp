@@ -1,5 +1,10 @@
 {
   "hosting": {
     "public": "build/bundled"
-  }
+  },
+  // add the following section to instruct Firebase to serve up index.html for any URL's that don't otherwise end in a file extension.
+  "rewrites": [ {
+  	"source": "**/!{*.*}",
+  	"destination": "/index.html"
+} ]
 }
